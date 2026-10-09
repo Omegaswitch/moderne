@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151412">
+  <title>GMK Moderne</title>
+  <meta name="description" content="GMK Moderne keycap set.">
+  <style>
+    :root{--bg:#1b1713;--panel:#241f19;--ink:#f0eadb;--muted:#b2a899;--rule:#51473b;--red:#e20f2a;--yellow:#efa900;--blue:#07559c;--beige:#d8d1c1;--sans:Arial,Helvetica,sans-serif;--mono:"Courier New",monospace}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans)}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{font:inherit;color:inherit}.wrap{width:min(1500px,100%);margin:auto;padding:0 5vw}.header{position:fixed;z-index:10;top:0;left:0;right:0;background:rgba(27,23,19,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);opacity:0;transform:translateY(-100%);pointer-events:none;transition:opacity .55s ease,transform .55s ease}.header.is-visible{opacity:1;transform:translateY(0);pointer-events:auto}.nav{height:74px;display:flex;align-items:center;gap:32px}.brand{display:block;width:180px;flex:none}.brand img{width:100%;height:auto}.nav-links{display:flex;align-items:center;gap:clamp(12px,2.3vw,34px);margin-left:auto}.nav-links a{font-size:13px;padding:12px 8px;letter-spacing:.1em;text-transform:uppercase;color:#d8d1c4;transition:color .18s}.nav-links a:hover,.nav-links a:focus-visible{color:var(--hover-color,var(--yellow));outline:none}.menu{display:none;background:none;border:0;font-size:25px}.hero{height:100svh;min-height:680px;position:relative;overflow:hidden;display:flex;align-items:center;padding:45px 0}.hero::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 78% 62% at 18% 8%,rgba(12,10,8,.5) 0%,rgba(12,10,8,.32) 42%,rgba(12,10,8,.12) 72%,rgba(12,10,8,0) 100%)}.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:0;will-change:transform}.hero-wordmark{--mark-w:min(63vw,820px);--mark-h:calc(var(--mark-w) / 10.53);position:absolute;z-index:3;top:7%;left:5vw;width:var(--mark-w);height:calc(var(--mark-h) * 2 + 14px);display:flex;flex-direction:column;gap:14px;pointer-events:none;filter:drop-shadow(0 2px 5px rgba(0,0,0,.35))}.wordmark-gmk,.wordmark-moderne{display:block;height:var(--mark-h);flex:none;background-image:url("assets/gmk-moderne-logo.png");background-repeat:no-repeat;background-size:var(--mark-w) var(--mark-h)}.wordmark-gmk{width:30%;background-position:left center}.wordmark-moderne{width:70%;background-position:right center}.hero-image:focus{outline:2px solid var(--yellow)}.hero-arrow{position:absolute;right:5vw;bottom:8%;font:12px var(--mono);color:var(--muted);z-index:3}
+    section{border-top:1px solid var(--rule)}.section{padding:92px 0 100px}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px}.section-heading h2{font-size:clamp(48px,8vw,112px);line-height:.84;letter-spacing:-.075em;text-transform:uppercase;margin:0;font-weight:900}.section-heading p{margin:0;color:var(--muted);font-size:14px;max-width:250px;line-height:1.4}.kits-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.kit-card{min-width:0}.kit-image{width:100%;aspect-ratio:1;object-fit:cover;background:#211f1c}.kit-title{font-size:22px;letter-spacing:.06em;text-transform:uppercase;margin:18px 0 0;font-weight:700}.colors{background:#211c17}.color-groups{display:grid;grid-template-columns:1fr .72fr;gap:8vw}.color-group h3{font-size:14px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin:0 0 20px;color:var(--muted)}.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.swatch{min-width:0}.chip{height:clamp(90px,13vw,170px);border:1px solid rgba(255,255,255,.12);margin-bottom:10px;position:relative;overflow:hidden}.chip::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.1),transparent 48%,rgba(0,0,0,.12))}.swatch b{font:14px var(--mono);font-weight:400}.swatches.extra{grid-template-columns:repeat(4,1fr)}.extra .chip{height:clamp(68px,9vw,120px)}.renders-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.render{aspect-ratio:1;width:100%;object-fit:cover;background:#201e1b;cursor:zoom-in;transition:transform .45s cubic-bezier(.2,.75,.2,1),filter .3s}.render:hover{transform:scale(.985);filter:brightness(1.08)}.vendors{min-height:36vh;display:flex;align-items:center}.vendors-inner{width:100%;display:grid;grid-template-columns:1fr;align-items:center}.vendors h2{font-size:clamp(56px,10vw,144px);line-height:.8;letter-spacing:-.09em;text-transform:uppercase;margin:0;font-weight:900}.vendor-panel{display:none}.footer{border-top:1px solid var(--rule);padding:25px 0;color:var(--muted);font:10px var(--mono);letter-spacing:.08em;display:flex;justify-content:space-between}
+    dialog{border:0;padding:0;background:rgba(9,9,9,.96);max-width:none;max-height:none;width:100vw;height:100dvh;color:white}dialog::backdrop{background:#090909;opacity:0;transition:opacity .32s ease}dialog[open]::backdrop{opacity:1}.lightbox{height:100%;display:grid;place-items:center;position:relative;padding:5vh 5vw;opacity:0;transform:scale(.96);transition:opacity .32s ease,transform .42s cubic-bezier(.2,.75,.2,1)}.lightbox.is-open{opacity:1;transform:scale(1)}.lightbox img{max-height:90vh;max-width:90vw;object-fit:contain}.lightbox button{position:absolute;right:3vw;top:3vh;border:0;background:none;font-size:38px;cursor:pointer}
+    @media(max-width:700px){html{scroll-padding-top:64px}.nav{height:64px}.brand{width:148px}.menu{display:block;margin-left:auto}.nav-links{display:none;position:absolute;top:64px;left:0;right:0;margin:0;padding:22px 5vw 26px;background:var(--bg);border-bottom:1px solid var(--rule);flex-wrap:wrap;justify-content:flex-end;gap:10px 14px}.nav-links a{font-size:12px;padding:10px 7px}.nav-links.open{display:flex}.hero{height:100svh;min-height:650px;align-items:flex-start;padding-top:140px}.hero-image{width:100%;height:100%;margin:0;object-position:center center}.hero-wordmark{--mark-w:84vw;--mark-h:calc(var(--mark-w) / 10.53);top:7%;left:4vw;height:calc(var(--mark-h) * 2 + 9px);gap:9px}.hero-arrow{bottom:7%;right:5vw}.section{padding:65px 0 72px}.section-heading{display:block;margin-bottom:28px}.section-heading p{margin-top:15px}.kits-grid{gap:12px}.kit-title{font-size:17px;margin-top:12px}.color-groups{grid-template-columns:1fr;gap:42px}.swatches{gap:8px}.chip{height:clamp(72px,18vw,130px);margin-bottom:7px}.swatch b{font-size:12px}.extra .chip{height:clamp(62px,14vw,100px)}.renders-grid{grid-template-columns:1fr;gap:14px}.vendors{min-height:360px}.vendors-inner{grid-template-columns:1fr;gap:0}.vendor-panel{display:none}.footer{gap:12px;flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="header"><div class="wrap nav">
+    <a class="brand" href="#hero" aria-label="GMK Moderne home"><img src="assets/gmk-moderne-logo.png" alt="GMK Moderne"></a>
+    <button class="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main navigation"><a href="#hero">Hero</a><a href="#kits">Kits</a><a href="#colors">Colors</a><a href="#renders">Renders</a><a href="#vendors">Vendors</a></nav>
+  </div></header>
+  <main>
+    <section class="hero" id="hero">
+      <img class="hero-image parallax" src="assets/render3.jpg" alt="GMK Moderne keycaps on a beige keyboard">
+      <div class="hero-wordmark" role="img" aria-label="GMK Moderne"><span class="wordmark-gmk"></span><span class="wordmark-moderne"></span></div>
+      <a class="hero-arrow" href="#kits" aria-label="Scroll to kits">↓</a>
+    </section>
+    <section class="section" id="kits"><div class="wrap">
+      <div class="section-heading"><h2>Kits</h2></div>
+      <div class="kits-grid">
+        <article class="kit-card"><img class="kit-image" src="assets/base.jpg" alt="GMK Moderne base kit layout"><h3 class="kit-title">Base</h3></article>
+        <article class="kit-card"><img class="kit-image" src="assets/novelties.jpg" alt="GMK Moderne novelties kit layout"><h3 class="kit-title">Novelties</h3></article>
+      </div>
+    </div></section>
+    <section class="section colors" id="colors"><div class="wrap">
+      <div class="section-heading"><h2>Colors</h2></div>
+      <div class="color-groups">
+        <div class="color-group"><h3>Base colors</h3><div class="swatches">
+          <div class="swatch"><div class="chip" style="background:#e20f2a"></div><b>RO2</b></div>
+          <div class="swatch"><div class="chip" style="background:#efa900"></div><b>N6</b></div>
+          <div class="swatch"><div class="chip" style="background:#07559c"></div><b>V4</b></div>
+          <div class="swatch"><div class="chip" style="background:#d8d1c1"></div><b>L9</b></div>
+          <div class="swatch"><div class="chip" style="background:#171615"></div><b>CR</b></div>
+        </div></div>
+        <div class="color-group"><h3>Novelties</h3><div class="swatches extra">
+          <div class="swatch"><div class="chip" style="background:#e39ab9"></div><b>MG1</b></div>
+          <div class="swatch"><div class="chip" style="background:#81817f"></div><b>2B</b></div>
+          <div class="swatch"><div class="chip" style="background:#ee671e"></div><b>V2</b></div>
+          <div class="swatch"><div class="chip" style="background:#f0eee6"></div><b>WS1</b></div>
+        </div></div>
+      </div>
+    </div></section>
+    <section class="section" id="renders"><div class="wrap">
+      <div class="section-heading"><h2>Renders</h2></div>
+      <div class="renders-grid">
+        <img class="render" src="assets/render1.jpg" alt="GMK Moderne keyboard render, close detail" tabindex="0">
+        <img class="render" src="assets/render2.jpg" alt="GMK Moderne keyboard on a blue case" tabindex="0">
+        <img class="render" src="assets/render3.jpg" alt="GMK Moderne keyboard render, alternate angle" tabindex="0">
+      </div>
+    </div></section>
+    <section class="vendors" id="vendors"><div class="wrap vendors-inner">
+      <h2>Vendors</h2>
+    </div></section>
+  </main>
+  <footer class="wrap footer"><span>GMK MODERNE</span><a href="privacy.html">PRIVACY POLICY</a><a href="#hero">BACK TO TOP ↑</a></footer>
+  <dialog aria-label="Render viewer"><div class="lightbox"><button type="button" aria-label="Close image">×</button><img alt="Expanded keyboard render"></div></dialog>
+  <script>
+    const menu=document.querySelector('.menu'),nav=document.querySelector('.nav-links'),header=document.querySelector('.header'),heroSection=document.querySelector('.hero');
+    const updateHeader=()=>header.classList.toggle('is-visible',heroSection.getBoundingClientRect().bottom<=0);
+    addEventListener('scroll',updateHeader,{passive:true});addEventListener('resize',updateHeader);updateHeader();
+    menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+    const dialog=document.querySelector('dialog'),large=dialog.querySelector('img'),lightbox=dialog.querySelector('.lightbox');let closeTimer;
+    const showImage=img=>{clearTimeout(closeTimer);large.src=img.src;large.alt=img.alt;if(!dialog.open)dialog.showModal();requestAnimationFrame(()=>lightbox.classList.add('is-open'))};
+    const closeViewer=()=>{if(!dialog.open)return;lightbox.classList.remove('is-open');closeTimer=setTimeout(()=>dialog.close(),340)};
+    document.querySelectorAll('.render').forEach(img=>{img.addEventListener('click',()=>showImage(img));img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showImage(img)}})});
+    dialog.querySelector('button').addEventListener('click',closeViewer);dialog.addEventListener('click',e=>{if(e.target===dialog||e.target===lightbox)closeViewer()});dialog.addEventListener('cancel',e=>{e.preventDefault();closeViewer()});
+    const colorChoices=['#e20f2a','#efa900','#07559c','#d8d1c1','#171615','#e39ab9','#81817f','#ee671e','#f0eee6'];
+    document.querySelectorAll('.nav-links a').forEach(link=>{const pick=()=>link.style.setProperty('--hover-color',colorChoices[Math.floor(Math.random()*colorChoices.length)]);link.addEventListener('pointerenter',pick);link.addEventListener('focus',pick)});
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches){let pending=false;const hero=document.querySelector('.hero-image');const move=()=>{if(pending)return;pending=true;requestAnimationFrame(()=>{const y=scrollY;hero.style.transform=`translate3d(0,${Math.min(y*.12,100)}px,0)`;pending=false})};addEventListener('scroll',move,{passive:true})}
+  </script>
+</body>
+</html>
