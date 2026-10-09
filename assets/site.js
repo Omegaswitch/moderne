@@ -8,6 +8,6 @@ const menu=document.querySelector('.menu'),nav=document.querySelector('.nav-link
     const closeViewer=()=>{if(!dialog.open)return;lightbox.classList.remove('is-open');closeTimer=setTimeout(()=>dialog.close(),340)};
     document.querySelectorAll('.render,.kit-image').forEach(img=>{img.addEventListener('click',()=>showImage(img));img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showImage(img)}})});
     dialog.querySelector('button').addEventListener('click',closeViewer);dialog.addEventListener('click',e=>{if(e.target===dialog||e.target===lightbox)closeViewer()});dialog.addEventListener('cancel',e=>{e.preventDefault();closeViewer()});
-    const colorChoices=['#e20f2a','#efa900','#07559c','#d8d1c1','#171615','#e39ab9','#81817f','#ee671e','#f0eee6'];
+    const colorChoices=['#e20f2a','#efa900','#07559c','#d8d1c1','#171615','#d82868','#81817f','#ee671e','#f0eee6'];
     document.querySelectorAll('.nav-links a').forEach(link=>{const pick=()=>link.style.setProperty('--hover-color',colorChoices[Math.floor(Math.random()*colorChoices.length)]);link.addEventListener('pointerenter',pick);link.addEventListener('focus',pick)});
     if(!matchMedia('(prefers-reduced-motion: reduce)').matches){let pending=false;const hero=document.querySelector('.hero-image');const move=()=>{if(pending)return;pending=true;requestAnimationFrame(()=>{const y=scrollY;hero.style.transform=`translate3d(0,${Math.min(y*.12,100)}px,0)`;pending=false})};addEventListener('scroll',move,{passive:true})}
